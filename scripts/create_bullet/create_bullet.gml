@@ -5,6 +5,7 @@
 /// @param {integer} speed The speed of the bullet
 /// @param {index} creator The id of the creator object
 
+// change to test stuff
 
 function create_bullet(_faction, _direction, _speed, _creator){
 	var inst = instance_create_layer(x, y, "Instances", obj_bullet);
