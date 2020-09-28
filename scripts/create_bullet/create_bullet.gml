@@ -15,12 +15,12 @@ function create_bullet(_faction, _direction, _speed, _creator){
 		faction = _faction;
 		direction = _direction;
 		creator = _creator;
-	}
-	
-	if (faction == factions.ally) {
-		image_blend = c_aqua;
-	} else if (faction == factions.enemy) {
-		image_blend = c_red;
+
+		if (faction == factions.ally) {
+			image_blend = c_aqua;
+		} else if (faction == factions.enemy) {
+			image_blend = c_red;
+		}
 	}
 	
 	audio_play_sound(snd_zap, 1, false);

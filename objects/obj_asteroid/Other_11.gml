@@ -15,3 +15,5 @@ if (sprite_index == spr_asteroid_huge) {
 		new_asteroid.sprite_index = spr_asteroid_small;
 	}
 }
+
+generate_debris();
