@@ -1,5 +1,7 @@
+// Set camera position
 set_camera_to_target(target);
 
+// Set camera parallax
 layer_x("Parallax_0", global.cameraX * 0.98);
 layer_y("Parallax_0", global.cameraY * 0.98);
 

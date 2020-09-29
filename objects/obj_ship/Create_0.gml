@@ -1,6 +1,6 @@
 event_inherited();
 
-allow_exhaust = true;
+exhaust_counter = 0;
 bulletSpd = 6;
 HP = 1;
 guns = -1;

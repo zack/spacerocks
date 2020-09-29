@@ -1,4 +1,4 @@
-/// @description 
+event_inherited();
 
 if (instance_exists(obj_ship)) {
 	var distance_to_ship = point_distance(x, y, obj_ship.x, obj_ship.y);

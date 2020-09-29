@@ -2,7 +2,6 @@
 
 score += 10;
 audio_play_sound(snd_die, 1, false);
-instance_destroy();
 
 if (sprite_index == spr_asteroid_huge) {
 	repeat(2) {
@@ -16,4 +15,4 @@ if (sprite_index == spr_asteroid_huge) {
 	}
 }
 
-generate_debris();
+instance_destroy();

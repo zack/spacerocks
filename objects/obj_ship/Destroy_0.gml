@@ -1,3 +1,4 @@
+event_inherited();
 instance_destroy();
 
 lives -= 1;
@@ -8,4 +9,7 @@ with (obj_game) {
 
 audio_play_sound(snd_die, 1, false);
 
-generate_debris();
+var _id = id;
+with (obj_particles) {
+	generate_debris(part_type_ship_debris, _id, 10);
+}
