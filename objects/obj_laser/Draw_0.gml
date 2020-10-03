@@ -14,8 +14,8 @@ draw_line_width_color(
 
 // Get collision
 var inst = collision_line(
-	x, 
-	y,
+	x + lengthdir_x(25, direction), 
+	y + lengthdir_y(25, direction),
 	x + lengthdir_x(len, direction),
 	y + lengthdir_y(len, direction),
 	obj_faction,
@@ -23,11 +23,24 @@ var inst = collision_line(
 	false
 );
 
-// Collide
-if (inst != noone && inst.faction != faction) {
-	with(inst) {
-		if (!immune_to_laser) {
+show_debug_message(inst);
+
+if (inst != 100003) {
+	if (inst > 0) {
+		show_debug_message("Inst: " + string(inst));
+	}
+	// Collide
+	if (inst != noone && inst.faction != faction) {
+		show_debug_message("Collided");
+		with(inst) {
 			event_perform(ev_other, ev_user1);
 		}
+	} else if (inst == noone) {
+		show_debug_message("No one");
+	} else if (inst.faction == faction) {
+		show_debug_message("Same faction");
+		//show_debug_message("faction match:" + string(faction) + " = " + string(inst.faction));
+	} else {
+		show_debug_message("Else");
 	}
 }

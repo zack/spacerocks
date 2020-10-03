@@ -1,5 +1,4 @@
 event_inherited();
-instance_destroy();
 
 var _id = id;
 with (obj_particles) {
